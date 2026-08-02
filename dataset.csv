@@ -1,0 +1,61 @@
+Activity,Avg_CO2_Emission,Category,Better_Alternative,Alternative_CO2
+"Car (Petrol,10 km)",2.3,Transport,"Bus (10 km)",0.6
+"Car (Petrol,20 km)",4.6,Transport,"Bus (20 km)",1.2
+"Car (Diesel,20 km)",5.2,Transport,"Bus (20 km)",1.2
+"Motorcycle (20 km)",2.8,Transport,"Bicycle (20 km)",0.0
+"Scooter (20 km)",2.1,Transport,"Bicycle (20 km)",0.0
+"Bus (10 km)",0.6,Transport,"Walking (10 km)",0.0
+"Bus (20 km)",1.2,Transport,"Bicycle (20 km)",0.0
+"Metro (20 km)",0.8,Transport,"Bicycle (20 km)",0.0
+"Train (50 km)",2.0,Transport,"Metro (50 km)",1.0
+"Taxi (20 km)",4.8,Transport,"Carpool (20 km)",2.2
+"Carpool (20 km)",2.2,Transport,"Bus (20 km)",1.2
+"Electric Car (20 km)",1.5,Transport,"Bicycle (20 km)",0.0
+"Flight (200 km)",50.0,Transport,"Train (200 km)",10.0
+"Bicycle (20 km)",0.0,Transport,"Continue Cycling",0.0
+"Walking (5 km)",0.0,Transport,"Continue Walking",0.0
+"AC usage (4 hrs/day)",3.0,Household,"Ceiling Fan (4 hrs/day)",0.5
+"AC usage (8 hrs/day)",6.0,Household,"Ceiling Fan (8 hrs/day)",1.0
+"Ceiling Fan (4 hrs/day)",0.5,Household,"Natural Ventilation",0.0
+"Ceiling Fan (8 hrs/day)",1.0,Household,"Natural Ventilation",0.0
+"LED Bulb (5 hrs/day)",0.05,Household,"Continue Using LED",0.05
+"Old Bulb (5 hrs/day)",0.20,Household,"LED Bulb (5 hrs/day)",0.05
+"Refrigerator (Old)",2.5,Household,"Energy Efficient Refrigerator",1.2
+"Energy Efficient Refrigerator",1.2,Household,"Continue Using Efficient Appliance",1.2
+"Washing Machine (Hot Water)",2.2,Household,"Cold Water Wash",1.0
+"Cold Water Wash",1.0,Household,"Continue Cold Wash",1.0
+"Geyser (30 mins)",3.0,Household,"Solar Water Heater",0.8
+"Solar Water Heater",0.8,Household,"Continue Solar Heating",0.8
+"Desktop Computer (8 hrs)",2.0,Household,"Laptop (8 hrs)",0.7
+"Laptop (8 hrs)",0.7,Household,"Power Saving Mode",0.5
+"Microwave (30 mins)",0.5,Household,"Efficient Cooking",0.3
+"Meat-based diet",7.0,Food,"Vegetarian Diet",2.0
+"Beef Meal",9.0,Food,"Vegetarian Meal",2.0
+"Chicken Meal",4.0,Food,"Vegetarian Meal",2.0
+"Vegetarian Diet",2.0,Food,"Continue Vegetarian Diet",2.0
+"Vegan Diet",1.5,Food,"Continue Vegan Diet",1.5
+"Fast Food",3.0,Food,"Home Cooked Meal",1.5
+"Home Cooked Meal",1.5,Food,"Continue Home Cooking",1.5
+"Dairy-rich Diet",3.5,Food,"Plant-based Dairy",2.0
+"Imported Fruits",2.5,Food,"Local Seasonal Fruits",1.0
+"Local Vegetables",1.0,Food,"Continue Buying Local",1.0
+"Online Shopping",1.0,Lifestyle,"Local Shopping",0.3
+"Local Shopping",0.3,Lifestyle,"Continue Local Shopping",0.3
+"Plastic Bag",0.5,Lifestyle,"Reusable Bag",0.1
+"Reusable Bag",0.1,Lifestyle,"Continue Using Reusable Bag",0.1
+"Plastic Bottle",0.6,Lifestyle,"Reusable Bottle",0.1
+"Reusable Bottle",0.1,Lifestyle,"Continue Reusable Bottle",0.1
+"Fast Fashion Purchase",5.0,Lifestyle,"Second-hand Clothing",1.5
+"Second-hand Clothing",1.5,Lifestyle,"Continue Reusing Clothes",1.5
+"Paper Waste",1.2,Lifestyle,"Digital Documents",0.2
+"Recycling",0.2,Lifestyle,"Continue Recycling",0.2
+"Coal Electricity (10 kWh)",8.0,Energy,"Solar Electricity (10 kWh)",0.5
+"Solar Electricity (10 kWh)",0.5,Energy,"Continue Solar Energy",0.5
+"Wind Electricity (10 kWh)",0.3,Energy,"Continue Wind Energy",0.3
+"Diesel Generator (1 hr)",6.0,Energy,"Grid Electricity",2.5
+"EV Charging",1.0,Energy,"Solar EV Charging",0.2
+"Solar EV Charging",0.2,Energy,"Continue Solar Charging",0.2
+"Mobile Charging",0.05,Energy,"Continue Efficient Charging",0.05
+"Power Bank Charging",0.08,Energy,"Direct Mobile Charging",0.05
+"Incandescent Lamp",0.30,Energy,"LED Bulb",0.05
+"Smart Power Strip",0.05,Energy,"Continue Smart Power Strip",0.05

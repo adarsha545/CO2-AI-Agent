@@ -1,0 +1,16 @@
+Activity,Category,Avg_CO2_Emission,Eco_Tip,Better_Alternative,Alternative_CO2,Reduction_Percentage
+Walking (2 km),Transport,0.0,"Walking produces zero direct CO₂ emissions and improves health.","Walking (2 km)",0.0,100
+Walking (5 km),Transport,0.0,"Walking is one of the most sustainable transportation methods.","Walking (5 km)",0.0,100
+Bicycle (5 km),Transport,0.0,"Cycling eliminates fuel consumption and reduces pollution.","Bicycle (5 km)",0.0,100
+Bicycle (20 km),Transport,0.0,"Cycling for medium distances significantly lowers carbon emissions.","Bicycle (20 km)",0.0,100
+Bus (10 km),Transport,0.6,"Public buses reduce emissions by transporting many passengers together.","Electric Bus (10 km)",0.2,67
+Bus (20 km),Transport,1.2,"Using public transport lowers individual carbon emissions.","Metro (20 km)",0.7,42
+Metro (20 km),Transport,0.7,"Metro systems are among the cleanest urban transport options.","Metro (20 km)",0.7,0
+Train (50 km),Transport,1.0,"Rail transport is more energy-efficient than private vehicles.","Electric Train (50 km)",0.6,40
+Motorcycle (10 km),Transport,1.2,"Ride only when necessary and maintain your vehicle regularly.","Bicycle (10 km)",0.0,100
+Motorcycle (20 km),Transport,2.3,"Combine trips to reduce unnecessary fuel usage.","Bus (20 km)",1.2,48
+Petrol Car (10 km),Transport,2.3,"Carpool or use public transport whenever possible.","Bus (10 km)",0.6,74
+Petrol Car (20 km),Transport,4.6,"Replace private car trips with buses, metro, or cycling.","Bus (20 km)",1.2,74
+Diesel Car (20 km),Transport,5.0,"Diesel vehicles emit higher pollutants; consider cleaner alternatives.","Electric Car (20 km)",0.9,82
+Electric Car (20 km),Transport,0.9,"Charge with renewable energy whenever available.","Walking (2 km)",0.0,100
+Domestic Flight (300 km),Transport,75.0,"Choose rail travel for shorter distances whenever possible.","Train (300 km)",6.0,92

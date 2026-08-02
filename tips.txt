@@ -1,0 +1,119 @@
+Car (Petrol,10 km): Use public transport or carpool whenever possible.
+
+Car (Petrol,20 km): Replace private car trips with buses, metro, or cycling.
+
+Car (Diesel,20 km): Consider public transport or switching to an electric vehicle.
+
+Motorcycle (20 km): Cycle or use public transport for short trips.
+
+Scooter (20 km): Walk or cycle whenever possible.
+
+Bus (10 km): Walking is the cleanest option for short distances.
+
+Bus (20 km): Continue using public transport instead of private cars.
+
+Metro (20 km): Metro is already a low-carbon transport option.
+
+Train (50 km): Prefer electric rail services over flights for medium distances.
+
+Taxi (20 km): Choose carpooling or buses to reduce emissions.
+
+Carpool (20 km): Share rides regularly to lower emissions per passenger.
+
+Electric Car (20 km): Charge using renewable energy whenever possible.
+
+Flight (200 km): Prefer trains whenever feasible to reduce carbon emissions.
+
+Bicycle (20 km): Excellent choice. Continue cycling for daily travel.
+
+Walking (5 km): Walking has zero emissions and improves health.
+
+AC usage (4 hrs/day): Set AC between 24°C and 26°C to save energy.
+
+AC usage (8 hrs/day): Reduce AC usage and combine it with ceiling fans.
+
+Ceiling Fan (4 hrs/day): Use natural ventilation whenever weather permits.
+
+Ceiling Fan (8 hrs/day): Turn off fans when leaving the room.
+
+LED Bulb (5 hrs/day): Continue using LED bulbs to save electricity.
+
+Old Bulb (5 hrs/day): Replace old bulbs with LED bulbs immediately.
+
+Refrigerator (Old): Upgrade to a 5-star energy-efficient refrigerator.
+
+Energy Efficient Refrigerator: Maintain proper temperature settings for efficiency.
+
+Washing Machine (Hot Water): Use cold water washing whenever possible.
+
+Cold Water Wash: Continue washing with cold water to save energy.
+
+Geyser (30 mins): Reduce usage time or switch to solar water heating.
+
+Solar Water Heater: Great eco-friendly choice. Continue using it.
+
+Desktop Computer (8 hrs): Use laptops or enable power-saving mode.
+
+Laptop (8 hrs): Reduce screen brightness and unplug when fully charged.
+
+Microwave (30 mins): Heat only the required amount of food.
+
+Meat-based diet: Reduce meat consumption and include more plant-based meals.
+
+Beef Meal: Replace beef with vegetarian or chicken-based meals.
+
+Chicken Meal: Try one or two vegetarian meals every week.
+
+Vegetarian Diet: Great low-carbon choice. Continue healthy eating.
+
+Vegan Diet: Excellent for reducing environmental impact.
+
+Fast Food: Choose homemade meals whenever possible.
+
+Home Cooked Meal: Continue preparing fresh meals at home.
+
+Dairy-rich Diet: Include more plant-based dairy alternatives.
+
+Imported Fruits: Buy local seasonal fruits to reduce transport emissions.
+
+Local Vegetables: Continue buying locally grown vegetables.
+
+Online Shopping: Combine multiple items into a single order.
+
+Local Shopping: Support nearby stores to reduce transport emissions.
+
+Plastic Bag: Carry a reusable cloth bag while shopping.
+
+Reusable Bag: Continue using reusable shopping bags.
+
+Plastic Bottle: Carry a reusable water bottle.
+
+Reusable Bottle: Excellent sustainable habit. Keep it up.
+
+Fast Fashion Purchase: Buy durable clothes or second-hand clothing.
+
+Second-hand Clothing: Continue reusing clothes to reduce textile waste.
+
+Paper Waste: Use digital documents whenever possible.
+
+Recycling: Continue separating recyclable waste properly.
+
+Coal Electricity (10 kWh): Switch to renewable energy whenever available.
+
+Solar Electricity (10 kWh): Excellent clean energy source. Continue using it.
+
+Wind Electricity (10 kWh): Wind energy is one of the cleanest power sources.
+
+Diesel Generator (1 hr): Avoid generator use unless absolutely necessary.
+
+EV Charging: Charge during off-peak hours or use solar energy.
+
+Solar EV Charging: Excellent sustainable charging option.
+
+Mobile Charging: Unplug the charger after the battery reaches 100%.
+
+Power Bank Charging: Charge only when necessary to reduce standby losses.
+
+Incandescent Lamp: Replace incandescent bulbs with LED bulbs.
+
+Smart Power Strip: Use smart strips to eliminate standby power consumption.
