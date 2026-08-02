@@ -1,7 +1,7 @@
 streamlit
 pandas
-langchain
+ollama
 chromadb
 sentence-transformers
-ollama
 matplotlib
+reportlab
