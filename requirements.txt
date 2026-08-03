@@ -1,8 +1,9 @@
 streamlit
 pandas
-ollama
+langchain
 chromadb
 sentence-transformers
+google-genai
 matplotlib
 reportlab
-google-generativeai
+torch

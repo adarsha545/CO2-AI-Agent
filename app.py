@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import ollama
+from google import genai
 from rag import generate_rag_response
 from sentence_transformers import SentenceTransformer
 from reportlab.platypus import SimpleDocTemplate, Paragraph
@@ -8,6 +8,9 @@ from reportlab.lib.styles import getSampleStyleSheet
 import chromadb
 import matplotlib.pyplot as plt
 import time
+client = genai.Client(
+    api_key=st.secrets["GEMINI_API_KEY"]
+)
 
 # ---------------------- FUNCTIONS ----------------------
 def get_tip(activity):
@@ -48,19 +51,13 @@ Example:
 2. Combine multiple trips into one journey.
 3. Walk or cycle for short distances.
 """
+    
+    response = client.models.generate_content(
+    model="gemini-3.6-flash",
+    contents=prompt,
+)
 
-    response = ollama.chat(
-        model="llama3",
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
-        options={
-            "temperature": 0.2,
-            "num_predict": 80
-        }
-    )
-
-    return response["message"]["content"]
+    return response.text
 
 from io import BytesIO
 
@@ -90,13 +87,12 @@ st.set_page_config(
 )
 # ---------------- Sidebar ----------------
 
-st.sidebar.title("🌍 Carbon Footprint AI")
+st.sidebar.title("🌍 Carbon Footprint AI Agent")
 
-st.sidebar.info(
+st.sidebar.markdown(
 """
-Estimate your daily carbon emissions,
-explore greener alternatives,
-and receive AI-powered sustainability insights.
+### 🌱 About
+Estimate your daily carbon footprint, discover greener alternatives, and receive AI-powered sustainability recommendations using Retrieval-Augmented Generation (RAG).
 """
 )
 
@@ -104,19 +100,61 @@ st.sidebar.markdown("---")
 
 st.sidebar.success("🏆 TCS APEX Capstone Project")
 
-st.sidebar.markdown("### 🛠 Tech Stack")
+st.sidebar.markdown("### 🚀 Features")
 
-st.sidebar.write("🐍 Python")
-st.sidebar.write("🎈 Streamlit")
-st.sidebar.write("🤖 Ollama (Llama 3)")
-st.sidebar.write("🧠 ChromaDB")
-st.sidebar.write("📄 Sentence Transformers")
-st.sidebar.write("📊 Matplotlib")
+st.sidebar.markdown("""
+- 📋 Activity Selection
+- ✍️ Natural Language Analysis
+- 📂 CSV Dataset Analysis
+- 🤖 AI Sustainability Recommendations
+- 🌱 Eco-Friendly Alternatives
+- 📊 Carbon Footprint Visualization
+- 📄 PDF Report Generation
+""")
+
+st.sidebar.markdown("---")
+
+st.sidebar.markdown("### 🛠 Technology Stack")
+
+st.sidebar.markdown("""
+- 🐍 Python
+- 🎈 Streamlit
+- 🤖 Google Gemini 3.6 Flash
+- 🧠 ChromaDB (Vector Database)
+- 🔍 Sentence Transformers
+- 📊 Matplotlib
+- 📄 ReportLab
+""")
+
+st.sidebar.markdown("---")
+
+st.sidebar.markdown("### 📈 Workflow")
+
+st.sidebar.markdown("""
+1. User Input
+2. Activity Matching (RAG)
+3. AI Analysis
+4. Sustainability Recommendations
+5. PDF Report
+""")
+
+st.sidebar.markdown("---")
+
+st.sidebar.info(
+"""
+💡 **Tip**
+
+Describe your activity naturally.
+
+Example:
+> *I drive 20 km daily using a petrol car.*
+"""
+)
 
 st.sidebar.markdown("---")
 
 st.sidebar.caption(
-"Developed using Retrieval-Augmented Generation (RAG) and Large Language Models."
+"Developed by Adarsha Ghosh | M.Tech CSE | TCS APEX Capstone Project"
 )
 # ---------------------- DATA ----------------------
 
@@ -223,7 +261,7 @@ Do not invent new numbers.
 """
 
             status = st.status(
-            "🚀 Starting analysis...",
+            "🚀 Starting analysis Please Wait...",
             expanded=True
             )
 
@@ -233,23 +271,18 @@ Do not invent new numbers.
             status.write("📊 Calculating carbon emissions...")
             time.sleep(0.5)
 
-            status.write("🤖 Sending data to Llama 3...")
+            status.write("🤖 Analyzing with Gemini AI...")
 
-            response = ollama.chat(
-            model="llama3",
-            messages=[
-        {
-            "role": "user",
-            "content": prompt
-        }
-    ]
+            response = client.models.generate_content(
+    model="gemini-3.6-flash",
+    contents=prompt,
 )
 
             status.write("📋 Preparing report...")
 
             status.update(
-             label="✅ Analysis Complete",
-             state="complete"
+              label="✅ Analysis Complete",
+              state="complete"
             )
             st.subheader("📊 Dataset Analysis Summary")
             col1, col2, col3 = st.columns(3)
@@ -273,7 +306,7 @@ Do not invent new numbers.
             )
             st.subheader("🤖 AI Sustainability Analysis")
 
-            st.markdown(response["message"]["content"])
+            st.markdown(response.text)
             report = f"""
             CSV DATASET ANALYSIS
 
@@ -288,7 +321,7 @@ Do not invent new numbers.
 
             AI Analysis:
 
-            {response["message"]["content"]}
+            {response.text}
             """
 
             pdf = create_pdf(report)
@@ -382,7 +415,31 @@ elif input_method == "Type Your Activity":
 
         progress.progress(60, text="🤖 Generating AI recommendation...")
 
-        matched_activity, answer = generate_rag_response(activity)
+        try:
+            matched_activity, answer = generate_rag_response(activity)
+
+        except Exception as e:
+
+            error = str(e)
+
+            if "429" in error:
+                st.error(
+                    "⚠️ Daily Gemini API quota has been reached.\n\n"
+                    "Please try again tomorrow or use another API key."
+                )
+
+            elif "503" in error:
+                 st.error(
+                    "⚠️ Gemini AI is currently experiencing high demand.\n\n"
+                    "Please wait a few seconds and try again."
+                 )
+
+            else:
+                 st.error(
+                    "⚠️ An unexpected error occurred while generating the AI recommendation."
+                 )
+
+            st.stop()
 
         progress.progress(100, text="✅ Completed")
         time.sleep(0.3)
