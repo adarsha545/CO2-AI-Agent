@@ -1,110 +1,114 @@
-# 🌍 CO₂ AI Agent
+# 🌍 Carbon Footprint AI Agent
 
-> Generative AI Agent for Environmental CO₂ Reduction Awareness and Action Planning
+![Carbon Footprint AI Agent](screenshots/01_home_page.png)
+
+> AI-powered Sustainability Assistant for Carbon Footprint Estimation and Eco-friendly Recommendations using Retrieval-Augmented Generation (RAG) and Google Gemini AI.
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-red)
-![Ollama](https://img.shields.io/badge/LLM-Llama3-green)
+![Google Gemini](https://img.shields.io/badge/LLM-Google%20Gemini-blue)
 ![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-## 📌 Project Overview
+# 🌐 Live Demo
 
-CO₂ AI Agent is an AI-powered sustainability assistant developed as part of the **TCS Apex Capstone Project**.
+🚀 **Try the application here:**
 
-The application estimates carbon emissions from user activities and provides AI-generated eco-friendly recommendations using Retrieval-Augmented Generation (RAG) with Llama 3.
+https://carbon-footprint-ai-agent.streamlit.app/
+
+---
+
+# 📌 Project Overview
+
+Carbon Footprint AI Agent is an AI-powered sustainability assistant developed as part of the **TCS APEX Capstone Project**.
+
+The application estimates carbon emissions from user activities and provides AI-generated eco-friendly recommendations using **Retrieval-Augmented Generation (RAG)**, **Sentence Transformers**, **ChromaDB**, and **Google Gemini AI**.
 
 Users can:
 
-- Select an activity
-- Describe an activity in natural language
-- Upload a CSV dataset for AI analysis
-- Visualize emissions through charts
-- Download a PDF sustainability report
+- 🚗 Select an activity from the dataset
+- ✍️ Describe an activity in natural language
+- 📂 Upload a CSV file for carbon footprint analysis
+- 🤖 Receive AI-generated sustainability recommendations
+- 📊 Visualize emissions using interactive charts
+- 📄 Download a PDF sustainability report
 
 ---
 
 # ✨ Features
 
-✅ Activity Selection from Dataset
-
-✅ Natural Language Activity Analysis (RAG)
-
-✅ CSV Upload & AI Dataset Analysis
-
-✅ Carbon Emission Dashboard
-
-✅ Daily / Monthly / Yearly Emission Calculation
-
-✅ AI Sustainability Recommendations
-
-✅ Download Analysis Report (PDF)
-
-✅ Interactive Charts & Visualizations
+- ✅ Activity Selection from Dataset
+- ✅ Natural Language Activity Analysis (RAG)
+- ✅ CSV Upload & AI Dataset Analysis
+- ✅ ChromaDB Semantic Search
+- ✅ Google Gemini AI Recommendations
+- ✅ Better Alternative Suggestions
+- ✅ Carbon Emission Dashboard
+- ✅ Daily / Monthly / Yearly Emission Calculation
+- ✅ Interactive Charts & Visualizations
+- ✅ Download Analysis Report (PDF)
 
 ---
 
 # 🛠 Tech Stack
 
-| Technology            | Purpose              |
-| --------------------- | -------------------- |
-| Python                | Backend              |
-| Streamlit             | Web Interface        |
-| Ollama (Llama 3)      | Large Language Model |
-| ChromaDB              | Vector Database      |
-| Sentence Transformers | Embedding Generation |
-| LangChain             | RAG Workflow         |
-| Pandas                | Data Processing      |
-| Matplotlib            | Data Visualization   |
-| ReportLab             | PDF Generation       |
+| Technology              | Purpose              |
+| ----------------------- | -------------------- |
+| Python                  | Backend              |
+| Streamlit               | Web Interface        |
+| Google Gemini 3.6 Flash | Large Language Model |
+| ChromaDB                | Vector Database      |
+| Sentence Transformers   | Embedding Generation |
+| Pandas                  | Data Processing      |
+| Matplotlib              | Data Visualization   |
+| ReportLab               | PDF Generation       |
 
 ---
 
 # 🧠 AI Workflow
 
-User Input
-
-↓
-
-Embedding Generation
-
-↓
-
-Vector Search (ChromaDB)
-
-↓
-
-Relevant Sustainability Tips Retrieved
-
-↓
-
-Llama 3 (Ollama)
-
-↓
-
-AI Recommendation
-
-↓
-
-Visualization & PDF Report
+```
+                 User Input
+                     │
+                     ▼
+        Sentence Transformer Embedding
+                     │
+                     ▼
+          ChromaDB Vector Search
+                     │
+                     ▼
+         Relevant Context Retrieved
+                     │
+                     ▼
+          Google Gemini AI Analysis
+                     │
+                     ▼
+      Eco-Friendly Recommendation
+                     │
+                     ▼
+      Charts + PDF Sustainability Report
+```
 
 ---
 
 # 📂 Project Structure
 
 ```
-CO2-AI-Agent
+CO2_AI_AGENT/
 │
+├── chroma_db/
+├── screenshots/
+├── .streamlit/
 ├── app.py
 ├── rag.py
 ├── embeddings.py
 ├── dataset.csv
 ├── tips.txt
 ├── requirements.txt
-├── chroma_db/
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
@@ -113,41 +117,50 @@ CO2-AI-Agent
 
 The application generates:
 
-- Carbon Emission Summary
-- Current vs Better Alternative
-- Top 10 CO₂ Activities
-- Category-wise CO₂ Distribution
-- Category Summary Table
+- 📈 Carbon Emission Summary
+- 🌱 Current vs Better Alternative Comparison
+- 📊 Top CO₂ Emission Activities
+- 🥧 Category-wise CO₂ Distribution
+- 📋 Category Summary Table
+- 📄 Downloadable PDF Sustainability Report
 
 ---
 
 # 🚀 Installation
 
-Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/adarsha545/CO2-AI-Agent.git
 ```
 
-Move inside project
+### Move into the project directory
 
 ```bash
 cd CO2-AI-Agent
 ```
 
-Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run Ollama
+### Configure API Key
 
-```bash
-ollama run llama3
+Create the following file:
+
+```
+.streamlit/secrets.toml
 ```
 
-Launch Streamlit
+Add your Gemini API Key:
+
+```toml
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+```
+
+### Run the application
 
 ```bash
 streamlit run app.py
@@ -155,29 +168,71 @@ streamlit run app.py
 
 ---
 
-# 📷 Screenshots
+# 📷 Application Screenshots
 
-(Add screenshots here after deployment.)
+## 🏠 Home Page
 
-Example:
+![Home Page](screenshots/01_home_page.png)
 
-- Home Page
-- Activity Selection
-- AI Recommendation
-- CSV Upload
-- Dashboard
-- Charts
+---
+
+## 🌱 Activity Selection & Carbon Footprint
+
+![Activity Selection](screenshots/02_activity_selection.png)
+
+---
+
+## 🤖 AI Recommendation
+
+![AI Recommendation](screenshots/03_ai_recommendation.png)
+
+---
+
+## 📊 Carbon Footprint Dashboard & Charts
+
+![Dashboard](screenshots/04_visualization_dashboard.png)
+
+---
+
+## ✍️ Natural Language Activity Analysis (RAG)
+
+![Natural Language Input](screenshots/05_natural_language_input.png)
+
+---
+
+## 📂 CSV Upload
+
+![CSV Upload](screenshots/06_csv_upload.png)
+
+---
+
+## 📈 Dataset Analysis Summary
+
+![Dataset Summary](screenshots/07_csv_analysis_summary.png)
+
+---
+
+## 🌍 AI Sustainability Assessment
+
+![AI Sustainability Analysis](screenshots/08_ai_sustainability_analysis.png)
+
+---
+
+## 💡 Practical Recommendations
+
+![Practical Recommendations](screenshots/09_practical_recommendations.png)
 
 ---
 
 # 📈 Future Enhancements
 
-- User Authentication
-- Real-time Carbon API
-- Voice Assistant
-- Mobile Application
-- Cloud Database
-- Carbon Footprint Tracking
+- 🔐 User Authentication
+- 🌍 Real-time Carbon Emission API Integration
+- 🎙 Voice-based Activity Input
+- 📱 Mobile Application
+- ☁️ Cloud Database Integration
+- 📈 Personal Carbon Footprint Tracking Dashboard
+- 🌐 Multi-language Support
 
 ---
 
@@ -185,15 +240,25 @@ Example:
 
 **Adarsha Ghosh**
 
-B.Tech in Computer Science & Engineering
+M.Tech in Computer Science & Engineering
 
-TCS Apex Capstone Project 2026
+**TCS APEX Capstone Project 2026**
 
-GitHub:
+**GitHub Profile**  
 https://github.com/adarsha545
+
+**Project Repository**  
+https://github.com/adarsha545/CO2-AI-Agent
+
+**Live Application**  
+https://carbon-footprint-ai-agent.streamlit.app/
 
 ---
 
 # 📜 License
 
-This project is developed for educational purposes under the TCS Apex Capstone Program.
+This project is developed for **educational and research purposes** under the **TCS APEX Capstone Program**.
+
+---
+
+⭐ **If you found this project useful, consider giving it a Star on GitHub!**
